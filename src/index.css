@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media screen and (max-width: 800px) {
+  .as {
+    visibility: hidden;
+    display: block;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+}
+
+@media screen and(min-width: "760px") {
+  #c2 {
+    visibility: hidden;
+  }
+}

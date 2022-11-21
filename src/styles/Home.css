@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+.containerss {
+  display: flex;
+
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
+  text-align: center;
+  align-items: center;
+  margin-top: 50px;
+
+  font-family: "Roboto", sans-serif;
+  color: #10182f;
+}
+.cards {
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  align-items: center;
+}
+.cards-header .imgss {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  align-items: center;
+}
+.shh1 {
+  align-items: center;
+  font-weight: bold;
+  text-align: center;
+  /* margin-left: 60px; */
+}
+.str-btn {
+  align-items: center;
+
+  background: #a422cd;
+  color: white;
+  border-radius: 5.31718px;
+  border: 1px solid #a422cd;
+  width: 150px;
+  height: 51px;
+  left: 261px;
+  top: 735px;
+}
+.cards-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 250px;
+}
+
+.tag {
+  border-radius: 50px;
+  font-size: 12px;
+  margin: 0;
+  color: #fff;
+  padding: 2px 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+}
+.tag-teal {
+  /* background-color: #47bcd4; */
+  color: black;
+  font-weight: bolder;
+  text-align: center;
+}
+.tag-purple {
+  background-color: #5e76bf;
+  opacity: 0;
+}
+.tag-pink {
+  /* background-color: #cd5b9f; */
+  color: black;
+  font-weight: bolder;
+  text-align: center;
+}
+.cards-body p {
+  font-size: 13px;
+  margin: 0 0 40px;
+}
+.user {
+  display: flex;
+  margin-top: auto;
+}
+
+.user .imgss {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.user-info h5 {
+  margin: 0;
+}
+.user-info small {
+  color: #545d7a;
+}
+@media screen and (max-width: 900px) {
+  .containerss {
+    display: flex;
+    width: auto;
+    height: auto;
+    /* justify-content: space-evenly; */
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    flex: start;
+    align-items: initial;
+    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+
+    font-family: "Roboto", sans-serif;
+    color: #10182f;
+  }
+  .cards {
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 300px;
+  }
+}
+.containerzzz {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+.cardzz {
+  background: white;
+  width: 270px;
+  margin: 10px;
+  border-radius: 15px;
+}
+.cardzz-image {
+  height: 190px;
+  margin-bottom: 15px;
+  width: auto;
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
+}
+.car-1 {
+  background-image: url("../assets/money.png");
+}
+.cardzz .hp {
+  text-align: center;
+}
+.cardzz .cp {
+  text-align: center;
+}
+.cardzz .ca {
+  color: #a422cd;
+  display: block;
+  text-align: end;
+}
