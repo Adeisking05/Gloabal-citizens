@@ -1,8 +1,51 @@
 import React from "react";
+import { useState } from "react";
 import "../styles/SignUp.css";
 import Data from "../assets/Data-privacy.png";
 import Gropup from "../assets/Group.png";
+import { useNavigate, Link, UseLocation } from "react-router-dom";
+
 const SIgnUp = () => {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    email: "",
+    nin: "",
+    password: "",
+  });
+  const handleChange = (e) => {
+    const target = e.target;
+    const { name, value } = target;
+    setFormData({ ...formData, [name]: value });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await fetch(
+        "https://fast-Woodland-39897.herokuapp.com/auth/signup",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            email: formData.email,
+            nin: formData.nin,
+            password: formData.password,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json, text/plain, */*",
+          },
+        }
+      );
+      const data = await res.json();
+      console.log(data);
+
+      if (data.msg === "Successfully created user") {
+        navigate("/Login");
+      } else {
+        alert("error creating account");
+      }
+    } catch (error) {}
+  };
+
   return (
     <>
       <div className="split-screen">
@@ -14,25 +57,56 @@ const SIgnUp = () => {
             <img src={Data} alt="" />
           </section>
         </div>
+
         <div className="right">
-          <form>
+          <form onSubmit={handleSubmit}>
             <section className="copy">
+              <h6 className="allrad">
+                Already have an acount ?
+                <button
+                  style={{
+                    backgroundColor: "#a422cd",
+                    color: "white",
+                    width: "80px",
+                    borderRadius: "70px",
+                    marginLeft: "260px",
+                    margin: "30px",
+                  }}
+                >
+                  Sign In
+                </button>
+              </h6>
               <h2 className="sh2">Sign Up</h2>
               <h3>Create an account</h3>
 
               <div className="login-container"></div>
             </section>
             <div className="input-container name">
-              <label className="lbb " for="fname">
-                Name
-              </label>
-              <input id="fname" name="fname" type="text"></input>
-            </div>
-            <div className="input-container email">
-              <label className="lbb" for="email">
+              <label className="lbb " for="email">
                 Email
               </label>
-              <input id="email" name="email" type="email"></input>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                placeholder="Enter email"
+                onChange={handleChange}
+              />
+            </div>
+            <div className="input-container email">
+              <label className="lbb" for="nin">
+                NIN
+              </label>
+              <input
+                id="nin"
+                type="text"
+                value={formData.nin}
+                placeholder="Enter NIN"
+                onChange={handleChange}
+                maxLength={11}
+                name="nin"
+              />
             </div>
             <div className="input-container password">
               <label className="lbb" for="password">
@@ -42,9 +116,12 @@ const SIgnUp = () => {
                 id="password"
                 name="password"
                 type="password"
-                placeholder="must be at least 16 characters"
+                value={formData.password}
+                placeholder="must be at least 6 characters"
+                onChange={handleChange}
+                minLength={6}
               ></input>
-              <i class="far fa-eye-slash"></i>
+              {/* <i class="far fa-eye-slash"></i> */}
             </div>
 
             <button className="signup-btns" type="submit">

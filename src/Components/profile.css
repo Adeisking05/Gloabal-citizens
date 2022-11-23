@@ -164,12 +164,20 @@ label {
   padding: 10px;
   margin-bottom: 50px;
 }
-p {
+.Biop {
   width: 600px;
 }
 @media screen and (max-width: 900px) {
   .grid-containeree {
     display: flex;
     flex-direction: column;
+  }
+  .Biop {
+    flex-wrap: wrap;
+    width: auto;
+  }
+  .containeree {
+    margin-right: 0;
+    /* margin-left: 80px; */
   }
 }

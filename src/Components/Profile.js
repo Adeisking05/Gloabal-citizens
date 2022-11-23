@@ -27,7 +27,7 @@ const Profile = () => {
           <div className="grid-containeree">
             <div className="grid-itemzz">
               <h1>BIO ---------------------------</h1>
-              <p>
+              <p className="Biop">
                 I believe that no one should ever have <br />
                 to choose between a career we love and living
                 <br /> our lives with authencity and integrity. I’m confident in

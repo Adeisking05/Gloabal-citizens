@@ -20,6 +20,7 @@
   font-family: "Roboto", sans-serif;
   color: #10182f;
 }
+
 .cards {
   margin: 10px;
   background-color: #fff;
@@ -119,7 +120,7 @@
     display: flex;
     flex-direction: column;
     flex: start;
-    align-items: initial;
+    align-items: center;
     margin: 0;
     margin-left: 0;
     margin-right: 0;
@@ -134,6 +135,7 @@
     width: 300px;
   }
 }
+
 .containerzzz {
   display: flex;
   justify-content: center;
@@ -165,8 +167,121 @@
 .cardzz .cp {
   text-align: center;
 }
+.col-contentzz {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
 .cardzz .ca {
   color: #a422cd;
   display: block;
   text-align: end;
+}
+@media screen and (max-width: 960px) {
+  #scard {
+    display: none;
+  }
+}
+.cta-sectionzz {
+  background: gray;
+  /* position: relative; */
+  /* overflow: hidden; */
+  /* padding: 100px 30px; */
+  margin-top: 100px;
+  color: #fff;
+  /* align-items: center; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.background-overlaysszz {
+  /* background: #545d7a; */
+  /* position: absolute; */
+  /* top: 0; */
+  width: 100%;
+  /* height: 50%; */
+}
+.cta-contentzz {
+  z-index: 1;
+  /* position: relative; */
+  max-width: 1200px;
+  /* margin: auto; */
+  /* text-align: center; */
+  /* height: 10vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playstoreh1 {
+  font-size: 25px;
+  letter-spacing: 2px;
+  margin: 15px 0;
+  /* text-align: center; */
+  justify-content: center;
+}
+.dbtnzz {
+  /* line-height: 25px; */
+  background-color: #a422cd;
+  color: white;
+  border-radius: 5.31718px;
+  width: 150px;
+  height: auto;
+  margin-top: 10px;
+  height: 40px;
+}
+
+.cta-app {
+  padding: 18px 40px;
+  /* line-height: 50px; */
+  /* height: 200vh; */
+  width: 50vw;
+  background: #a422cd;
+
+  display: block;
+}
+.btn-holder {
+  float: right;
+  /* height: 600vh; */
+}
+.cta-col {
+  margin-bottom: 15px;
+  width: 100%;
+  float: left;
+}
+.col_1 {
+  margin-top: 70px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .cta-contentzz {
+    /* text-align: center; */
+    /* align-items: center; */
+    flex-direction: column;
+  }
+  .cta-col {
+    min-height: 200px;
+  }
+  .col_1 {
+    width: 60%;
+  }
+  .col_2 {
+    width: 40%;
+  }
+  .col-contentzz {
+    align-items: center;
+    justify-content: center;
+  }
+  .playstoreh1 {
+    text-align: center;
+  }
+}
+.col_2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

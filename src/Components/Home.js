@@ -1,13 +1,19 @@
 import React from "react";
 
-import Vec from "../assets/Vectary-texture.png";
+import Phone from "../assets/Phone-img.png";
 import money from "../assets/money.png";
 import { NavBar } from "./NavBar";
 import "../styles/Home.css";
+import BrowseUsers from "../Components/BrowseUsers";
 const Home = () => {
   return (
     <>
       <NavBar />
+      <header className="busers">
+        <h1 className="bh1">Browse Users</h1>
+        <BrowseUsers />
+      </header>
+
       <div className="containerss">
         <div className="cards">
           <div className="cards-header"></div>
@@ -26,7 +32,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="cards">
+        <div className="cards" id="scard">
           <div className="cards-header"></div>
           <div className="cards-body">
             <div className="user">
@@ -85,6 +91,28 @@ const Home = () => {
           </a>
         </div>
       </section>
+      <div className="cta-sectionzz">
+        <div className="cta-contentzz">
+          <div className="cta-col col_1">
+            <div className="col-contentzz">
+              <h2 className="playstoreh1">
+                Look Out For Ios and
+                <br />
+                Android
+              </h2>
+              <p> Search Connect</p>
+              {/* <p className="iosp"> */}
+              <button className="dbtnzz">Download Now</button> {/* </p> */}
+            </div>
+          </div>
+          <div className="cta-col col_2">
+            <div className="col-contentzz"></div>
+            <div className="btn-holder">
+              <img src={Phone} alt=""></img>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
