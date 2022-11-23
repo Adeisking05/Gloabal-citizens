@@ -106,19 +106,24 @@ input[type="submit"] {
   overflow: hidden;
   width: 100px;
   margin-top: 20px;
-  margin-left: 125px;
+  /* margin-left: 190px; */
 }
 .containeree {
   margin-right: 80px;
   /* margin-left: 80px; */
+  justify-content: center;
+  align-items: center;
 }
 .imagezz .alh2 {
   display: inline-block;
   position: absolute;
   padding: 10px;
-  margin-left: 40px;
+  /* margin-left: 40px; */
   font-weight: 600;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .imagezz h5 {
   display: inline-block;
@@ -148,15 +153,29 @@ input[type="submit"] {
   color: white;
   border: 2px solid rgb(219, 132, 147);
 }
+.imagezz {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 800px;
+}
 
 .grid-containeree {
   display: flex;
+  margin-left: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.statuzz {
+  align-items: center;
   justify-content: center;
 }
 
 h1 {
   font-weight: 500;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: sans-serif;
   font-style: oblique;
 }
 label {
@@ -179,5 +198,12 @@ label {
   .containeree {
     margin-right: 0;
     /* margin-left: 80px; */
+  }
+  .imagezz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0;
+    /* margin-left: 0; */
   }
 }

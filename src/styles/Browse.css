@@ -5,10 +5,11 @@
 }
 .busers {
   background: linear-gradient(95.83deg, #a122ce 0%, #ea22b1 157.88%);
+  margin-bottom: 40px;
 }
 .searchTermzz {
   width: 100%;
-  border: 3px solid white;
+  /* border: 3px solid; */
   border-right: none;
   padding: 5px;
   height: 50px;
@@ -24,7 +25,7 @@
   width: 70%;
   position: relative;
   top: 50%;
-  margin-top: 50px;
+  margin-top: 30px;
   background: linear-gradient(95.83deg, #a122ce 0%, #ea22b1 157.88%);
 
   left: 50%;

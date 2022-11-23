@@ -3,7 +3,6 @@ import { useState } from "react";
 import avatar from "../assets/avatar.png";
 import "../Components/profile.css";
 import { ProformNav } from "./ProformNav";
-
 const ProfileForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -26,7 +25,7 @@ const ProfileForm = () => {
     e.preventDefault();
     try {
       const res = await fetch(
-        "https://fast-Woodland-39897.herokuapp.com/auth/signup",
+        "https://fast-Woodland-39897.herokuapp.com/profile/edit_profile",
         {
           method: "POST",
           body: JSON.stringify({
@@ -40,6 +39,8 @@ const ProfileForm = () => {
             height: formData.height,
             interest: formData.interest,
             bio: formData.bio,
+            token:
+              "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzdkZmM3MGMxNGVhODk5MjBhZWZlMzEiLCJpYXQiOjE2NjkyMDcxNTh9.Cy9SJQ-kScShDt4Z7EQ7R8wu-_hm2rwQ374f2wxaM5U",
           }),
           headers: {
             "Content-Type": "application/json",
@@ -51,6 +52,7 @@ const ProfileForm = () => {
       console.log(data);
     } catch (error) {}
   };
+
   return (
     <>
       <ProformNav />

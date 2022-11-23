@@ -3,6 +3,7 @@ import { Icon } from "react-icons-kit";
 import { menu } from "react-icons-kit/feather/menu";
 import { x } from "react-icons-kit/feather/x";
 import "../styles/Nav.css";
+
 export const ProformNav = () => {
   const [toggle, setToggle] = useState(false);
 
