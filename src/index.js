@@ -11,6 +11,7 @@ import AboutUs from "./Components/AboutUs";
 import News from "./Components/News";
 import ProfileForm from "./Components/ProfileForm";
 import UseTokenProviderUser from "./Components/UserContext";
+import NewsPage from "./Components/NewsPage";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <UseTokenProviderUser>
@@ -21,6 +22,7 @@ root.render(
         <Route path="/Login" element={<Login />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/AboutUs" element={<AboutUs />} />
+        <Route path="/NewsPage" element={<NewsPage />} />
         <Route path="/News" element={<News />} />
         <Route path="/ProfileForm" element={<ProfileForm />} />
       </Routes>

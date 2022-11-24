@@ -5,8 +5,10 @@ import Vec from "../assets/Vectary-texture.png";
 import "../styles/AboutStyles.css";
 import Footer from "./Footer";
 import { NavBar } from "./NavBar";
+import { useLocation } from "react-router-dom";
 
 const NewsPage = () => {
+  const location = useLocation();
   return (
     <>
       <NavBar />
@@ -19,31 +21,14 @@ const NewsPage = () => {
         </div>
         <div className="content-large">
           <div className="blog-card">
-            <img src={Big} alt="" />
-            <h2>
-              Lorem ipsum dolor sit am et, consect et ur adip adip Lorem Lorem
-              ipsum dolor sit am et <p> 2 days ago</p>
-            </h2>
+            <img src={location.state.image} alt="" />
+            <h2>{location.state.title}</h2>
             <br />
-            <h4>
-              Lorem ipsum dolor sit am et, consect et ur adip isci ma ipsum
-              dolor sit am et, consect et ur ad consect et Lorem ipsum dolor sit
-              am et, consect et ur adip isci ma ipsum dolor sit am et, consect
-              et ur ad consect et Lorem ipsum dolor sit am et, consect et ur
-              adip isci ma ipsum dolor sit am et, consect et ur ad consect et
-              Lorem ipsum dolor sit am et, consect et ur adip isci ma ipsum
-              dolor sit am et, consect et ur ad consect et Lorem ipsum dolor sit
-              am et, consect et ur adip isci ma ipsum dolor sit am et, consect
-              et ur ad consect et Lorem ipsum dolor sit am et, consect et ur
-              adip isci ma ipsum dolor sit am et, consect et ur ad consect et
-              Lorem ipsum dolor sit am et, consect et ur adip isci ma ipsum
-              dolor sit am et, consect et ur ad consect et Lorem ipsum dolor sit
-              am et, consect et ur adip isci ma ipsum dolor sit am et, consect
-              et ur ad consect et Lorem ipsum dolor sit am et, consect et ur
-              adip isci ma ipsum dolor sit am et, consect et ur ad consect et
-            </h4>
+            <h4>{location.state.description}</h4>
           </div>
+          <p>{location.state.date}</p>
         </div>
+
         <div className="content-small">
           <input
             type="search"
