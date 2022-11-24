@@ -10,17 +10,20 @@ import Profile from "./Components/Profile";
 import AboutUs from "./Components/AboutUs";
 import News from "./Components/News";
 import ProfileForm from "./Components/ProfileForm";
+import UseTokenProviderUser from "./Components/UserContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/SIgnUp" element={<SIgnUp />} />
-      <Route path="/Login" element={<Login />} />
-      <Route path="/Profile" element={<Profile />} />
-      <Route path="/AboutUs" element={<AboutUs />} />
-      <Route path="/News" element={<News />} />
-      <Route path="/ProfileForm" element={<ProfileForm />} />
-    </Routes>
-  </BrowserRouter>
+  <UseTokenProviderUser>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/SIgnUp" element={<SIgnUp />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Profile" element={<Profile />} />
+        <Route path="/AboutUs" element={<AboutUs />} />
+        <Route path="/News" element={<News />} />
+        <Route path="/ProfileForm" element={<ProfileForm />} />
+      </Routes>
+    </BrowserRouter>
+  </UseTokenProviderUser>
 );

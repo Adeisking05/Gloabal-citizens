@@ -4,6 +4,7 @@ import bavatar from "../assets/bavatar.png";
 import "../Components/profile.css";
 import { ProfileNav } from "./ProfileNav";
 import { useState, useEffect, Link } from "react";
+import { NavBar } from "./NavBar";
 
 const Profile = () => {
   const [user, setUser] = useState({});
@@ -35,8 +36,7 @@ const Profile = () => {
 
   return (
     <>
-      <ProfileNav />
-
+      <NavBar />
       <div className="containeree">
         <section className="profilezz">
           <div className="imagezz">
