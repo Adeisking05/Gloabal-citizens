@@ -1,45 +1,23 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "../styles/SignUp.css";
 import Data from "../assets/Data-privacy.png";
 import Gropup from "../assets/Group.png";
 import { useNavigate } from "react-router-dom";
+import { userContext } from "./UserContext";
 const Login = () => {
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    nin: "",
-    password: "",
-  });
+  const userValues = useContext(userContext);
+  const { handleSubmit, formData, setFormData, success } = userValues;
+  if (success) {
+    setTimeout(() => {
+      navigate("/");
+    }, 3000);
+  }
   const handleChange = (e) => {
     const target = e.target;
     const { name, value } = target;
     setFormData({ ...formData, [name]: value });
-  };
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const res = await fetch(
-        "https://fast-Woodland-39897.herokuapp.com/auth/login",
-        {
-          method: "POST",
-          body: JSON.stringify({
-            nin: formData.nin,
-            password: formData.password,
-          }),
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json, text/plain, */*",
-          },
-        }
-      );
-      const data = await res.json();
-      if (data.msg === "Successfully logged in") {
-        navigate("/");
-      } else {
-        alert("error creating account");
-      }
-      console.log(data);
-    } catch (error) {}
   };
 
   return (

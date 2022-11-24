@@ -36,19 +36,24 @@ const Footer = () => {
             </ul> */}
           </div>
           <div className="footer-widget">
-            <h6>Services</h6>
+            <h6>Preferences</h6>
             <ul className="links">
               <li>
-                <a href="#">web design</a>
+                <a href="#">User Data</a>
               </li>
               <li>
-                <a href="#">web development</a>
+                <a href="#">User Storage</a>
+              </li>
+              <br />
+              <h6>Relevant Links</h6>
+              <li>
+                <a href="#">Home</a>
               </li>
               <li>
-                <a href="#">seo optimization</a>
+                <a href="#">Feed</a>
               </li>
               <li>
-                <a href="#">blog writing</a>
+                <a href="#">AboutUs</a>
               </li>
             </ul>
           </div>
@@ -56,16 +61,18 @@ const Footer = () => {
             <h6>Help &amp; Support</h6>
             <ul className="links">
               <li>
-                <a href="#">support center</a>
+                <a href="#">FAQ's</a>
               </li>
               <li>
-                <a href="#">live chat</a>
+                <a href="#">Help</a>
+              </li>
+              <br />
+              <h6>Contact</h6>
+              <li>
+                <a href="#">Stay in touch with us</a>
               </li>
               <li>
-                <a href="#">FAQ</a>
-              </li>
-              <li>
-                <a href="#">terms &amp; conditions</a>
+                <a href="#">deebuginstitute@gmail.com</a>
               </li>
             </ul>
           </div>

@@ -106,13 +106,18 @@ input[type="submit"] {
   overflow: hidden;
   width: 100px;
   margin-top: 20px;
-  /* margin-left: 190px; */
+  border: 0.81px solid #a422cd;
+}
+@media screen and(max-width: 990px) {
+  .baa {
+  }
 }
 .containeree {
-  margin-right: 80px;
+  /* margin-right: 80px; */
   /* margin-left: 80px; */
-  justify-content: center;
+  /* display: flex; */
   align-items: center;
+  justify-content: center;
 }
 .imagezz .alh2 {
   display: inline-block;
@@ -147,6 +152,9 @@ input[type="submit"] {
   font-weight: 900;
   border-radius: 7px;
   cursor: pointer;
+}
+.stat {
+  flex-direction: column;
 }
 .imagezz .edp:hover {
   background-color: rgb(219, 132, 147);
@@ -190,6 +198,8 @@ label {
   .grid-containeree {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .Biop {
     flex-wrap: wrap;
@@ -197,7 +207,6 @@ label {
   }
   .containeree {
     margin-right: 0;
-    /* margin-left: 80px; */
   }
   .imagezz {
     display: flex;
