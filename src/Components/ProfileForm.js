@@ -1,8 +1,10 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import avatar from "../assets/avatar.png";
 import "../Components/profile.css";
+import { NavBar } from "./NavBar";
 import { ProformNav } from "./ProformNav";
+import { userContext } from "./UserContext";
 const ProfileForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -16,6 +18,10 @@ const ProfileForm = () => {
     interest: "",
     bio: "",
   });
+
+  const userValues = useContext(userContext);
+  const { token } = userValues;
+
   const handleChange = (e) => {
     const target = e.target;
     const { name, value } = target;
@@ -39,8 +45,7 @@ const ProfileForm = () => {
             height: formData.height,
             interest: formData.interest,
             bio: formData.bio,
-            token:
-              "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzdkZmM3MGMxNGVhODk5MjBhZWZlMzEiLCJpYXQiOjE2NjkyMDcxNTh9.Cy9SJQ-kScShDt4Z7EQ7R8wu-_hm2rwQ374f2wxaM5U",
+            token: JSON.parse(token),
           }),
           headers: {
             "Content-Type": "application/json",
@@ -55,7 +60,7 @@ const ProfileForm = () => {
 
   return (
     <>
-      <ProformNav />
+      <NavBar />
       <div className="aligned">
         <img src={avatar} alt="" className="img" />
         <button className="imgb">Upload new picture</button>

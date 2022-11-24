@@ -3,11 +3,17 @@ import ProfileForm from "./ProfileForm";
 import bavatar from "../assets/bavatar.png";
 import "../Components/profile.css";
 import { ProfileNav } from "./ProfileNav";
-import { useState, useEffect, Link } from "react";
+import { useState, useEffect, useContext } from "react";
 import { NavBar } from "./NavBar";
+import { Link, useNavigate } from "react-router-dom";
+import { userContext } from "./UserContext";
 
 const Profile = () => {
   const [user, setUser] = useState({});
+  const navigate = useNavigate();
+
+  const userValues = useContext(userContext);
+  const { token } = userValues;
   useEffect(() => {
     fetchUsers();
   }, []);
@@ -19,8 +25,7 @@ const Profile = () => {
         {
           method: "POST",
           body: JSON.stringify({
-            token:
-              "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzdkZmM3MGMxNGVhODk5MjBhZWZlMzEiLCJpYXQiOjE2NjkyMDcxNTh9.Cy9SJQ-kScShDt4Z7EQ7R8wu-_hm2rwQ374f2wxaM5U",
+            token: JSON.parse(token),
           }),
           headers: {
             "Content-Type": "application/json",
@@ -44,10 +49,11 @@ const Profile = () => {
             <h2 style={{ marginLeft: "10px" }}>
               <br />
               {user?.name} <h4>{user?.email}</h4> <br />
-              {/* <Link to="/ProfileForm">
-                <button className="edp"> Edit Profile</button>
-              </Link> */}
-              {/* <p style={{ marginRight: "30px" }}>{user.status}</p> */}
+              <button className="edp" onClick={() => navigate("/ProfileForm")}>
+                {" "}
+                Edit Profile
+              </button>
+              <p style={{ marginRight: "30px" }}>{user.status}</p>
             </h2>
           </div>
         </section>
