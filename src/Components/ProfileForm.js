@@ -3,6 +3,7 @@ import { useState } from "react";
 import avatar from "../assets/avatar.png";
 import "../Components/profile.css";
 import { ProformNav } from "./ProformNav";
+import Footer from "./Footer";
 const ProfileForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -193,6 +194,7 @@ const ProfileForm = () => {
           </div>
         </form>
       </div>
+      <Footer />
     </>
   );
 };

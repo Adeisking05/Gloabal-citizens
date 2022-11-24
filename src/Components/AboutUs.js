@@ -3,13 +3,13 @@ import React from "react";
 import Rec from "../assets/Rectangle.png";
 import Vec from "../assets/Vectary-texture.png";
 import "../styles/AboutStyles.css";
+import Footer from "./Footer";
 import { NavBar } from "./NavBar";
 
 const AboutUs = () => {
   return (
     <>
       <NavBar />
-
       <div className="container">
         <div className="header">About Us</div>
         <div className="content-large">
@@ -84,6 +84,9 @@ const AboutUs = () => {
           </a>
         </div>
       </div>
+      <br />
+      <br />
+      <Footer />
     </>
   );
 };

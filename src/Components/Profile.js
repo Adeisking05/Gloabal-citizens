@@ -4,6 +4,7 @@ import bavatar from "../assets/bavatar.png";
 import "../Components/profile.css";
 import { ProfileNav } from "./ProfileNav";
 import { useState, useEffect, Link } from "react";
+import Footer from "./Footer";
 
 const Profile = () => {
   const [user, setUser] = useState({});
@@ -94,6 +95,15 @@ const Profile = () => {
           </div>
         </section>
       </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <Footer />
     </>
   );
 };

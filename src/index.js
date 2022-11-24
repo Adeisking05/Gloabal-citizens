@@ -10,6 +10,7 @@ import Profile from "./Components/Profile";
 import AboutUs from "./Components/AboutUs";
 import News from "./Components/News";
 import ProfileForm from "./Components/ProfileForm";
+import NewsPage from "./Components/NewsPage";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
@@ -21,6 +22,7 @@ root.render(
       <Route path="/AboutUs" element={<AboutUs />} />
       <Route path="/News" element={<News />} />
       <Route path="/ProfileForm" element={<ProfileForm />} />
+      <Route path="/NewsPage" element={<NewsPage />} />
     </Routes>
   </BrowserRouter>
 );

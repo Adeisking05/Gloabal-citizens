@@ -6,6 +6,7 @@ import "../styles/News.css";
 import "../styles/AboutStyles.css";
 import money from "../assets/money.png";
 import { NewsNav } from "./NewsNav";
+import Footer from "./Footer";
 
 const News = () => {
   return (
@@ -143,6 +144,8 @@ const News = () => {
           </p>
         </div>
       </div>
+      <br />
+      <Footer />
     </>
   );
 };
