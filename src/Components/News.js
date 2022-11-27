@@ -9,6 +9,7 @@ import { NewsNav } from "./NewsNav";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
 import NewsPage from "./NewsPage";
+import { NavBar } from "./NavBar";
 
 const News = () => {
   const navigate = useNavigate();
@@ -52,7 +53,7 @@ const News = () => {
   } else {
     return (
       <>
-        <NewsNav />
+        <NavBar />
         <div className="container">
           <div className="header">News And Event</div>
           <div className="content-large">
