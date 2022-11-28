@@ -55,7 +55,12 @@ const News = () => {
       <>
         <NavBar />
         <div className="container">
-          <div className="header">News And Event</div>
+          <div
+            className="header"
+            style={{ fontWeight: "900", color: "gray", fontSize: "30px" }}
+          >
+            NEWS AND EVENTS
+          </div>
           <div className="content-large">
             {news.map((item, i) => (
               <div className="courses-container">
@@ -72,7 +77,6 @@ const News = () => {
                 </div>
               </div>
             ))}
-            ;
           </div>
 
           <div className="content-small">

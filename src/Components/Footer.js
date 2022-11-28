@@ -11,8 +11,8 @@ const Footer = () => {
               <img src={bird} className="logo" />
             </a>
             <p className="desc">
-              A platform that let you discover and explore users around you, we
-              provide a Platform where your identity is safe.
+              A platform that let's you discover and explore users around you,
+              we provide a Platform where your identity is safe.
             </p>
           </div>
           <div className="footer-widget">
@@ -53,7 +53,7 @@ const Footer = () => {
                 <a href="#">Feed</a>
               </li>
               <li>
-                <a href="#">AboutUs</a>
+                <a href="#">About Us</a>
               </li>
             </ul>
           </div>

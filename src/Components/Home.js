@@ -48,8 +48,8 @@ const Home = () => {
               <span>Stay Updated</span>
             </h1>
             <h4>
-              Check out our information structure showing feeds & information
-              about thing around you.
+              Check out our information structure, showing feeds & information
+              about things around you.
             </h4>
             <br />
             <br />
@@ -97,11 +97,11 @@ const Home = () => {
           <div className="cta-col col_1">
             <div className="col-contentzz">
               <h2 className="playstoreh1">
-                Look Out For Ios and
+                Look out for IOS and
                 <br />
                 Android
               </h2>
-              <p> Search Connect</p>
+              <p> Search.Connect</p>
               {/* <p className="iosp"> */}
               <button className="dbtnzz">Download Now</button> {/* </p> */}
             </div>

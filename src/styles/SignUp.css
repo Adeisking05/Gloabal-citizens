@@ -26,7 +26,7 @@ a {
 }
 
 .small {
-  font-size: 80%;
+  font-size: 12px;
   text-align: center;
   /* margin-right: 120px; */
 }
@@ -42,6 +42,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .left {
   background: #a422cd;
@@ -51,6 +52,10 @@ a {
 .national {
   align-self: flex-start;
   justify-items: flex-start;
+  position: absolute;
+  top: 0;
+  margin-top: 25px;
+  /* left: 100% */
 }
 .login-container {
   margin-right: 200px;
@@ -63,7 +68,7 @@ a {
 .left,
 .copy {
   color: white;
-  text-align: center;
+  /* text-align: center; */
 }
 .legal {
   margin-right: 200px;
@@ -75,7 +80,7 @@ a {
 .right,
 .copy {
   color: black;
-  text-align: center;
+  /* text-align: center; */
 }
 h3 {
   margin-right: 180px;
@@ -89,10 +94,11 @@ h3 {
   margin: 1.5em 0;
   font-size: 0.875rem;
   justify-content: flex-start;
-  margin-left: 50px;
+  /* margin-left: 50px; */
 }
 .right form {
   width: 328px;
+  margin-left: 50px;
   /* margin-right: 90px; */
 }
 
@@ -183,6 +189,12 @@ label {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.3px;
+}
+.space{
+  margin-bottom: 35px;
+}
+.creation{
+  color: rgba(34, 34, 34, 0.4);
 }
 
 @media screen and (min-width: 900px) {
