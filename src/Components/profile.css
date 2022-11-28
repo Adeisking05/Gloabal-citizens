@@ -35,7 +35,7 @@ textarea {
 
 /* Style the label to display next to the inputs */
 label {
-  padding: 12px 12px 12px 0;
+  /* padding: 12px 12px 12px 0; */
   /* display: inline-block; */
 }
 .bb {
@@ -159,7 +159,7 @@ input[type="submit"] {
 .imagezz .edp:hover {
   background-color: rgb(219, 132, 147);
   color: white;
-  border: 2px solid rgb(219, 132, 147);
+  border: 2px solid rgb(10, 0, 2);
 }
 .imagezz {
   display: flex;
@@ -187,9 +187,9 @@ h1 {
   font-style: oblique;
 }
 label {
-  margin-right: 30px;
-  padding: 10px;
-  margin-bottom: 50px;
+  /* margin-right: 30px; */
+  /* padding: 10px; */
+  /* margin-bottom: 50px; */
 }
 .Biop {
   width: 600px;
@@ -215,4 +215,29 @@ label {
     margin-right: 0;
     /* margin-left: 0; */
   }
+}
+
+.profilecon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  /* row-gap: 50px; */
+  /* column-gap: 50px; */
+  padding: 0 350px;
+}
+.div-i {
+  flex-direction: column;
+}
+.div-ii {
+  flex-direction: column;
+}
+.biodiv {
+  display: flex;
+  flex-direction: row;
+}
+.labelstyle {
+  flex-direction: row;
+  display: flex;
 }

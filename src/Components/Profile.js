@@ -63,46 +63,37 @@ const Profile = () => {
 
         <br />
         <br />
-
-        <section className="containeree">
-          <div className="grid-containeree">
-            <div className="grid-itemzz">
-              <h1>BIO ---------------------------</h1>
-              <p className="Biop">{user?.bio}</p>
-              <br />
-              <br />
-              <br />
-              <br />
-              <h1>BASIC INFORMATION</h1>
-              <label>DOB</label> <label>{user?.date_of_birth}</label>
-              <br />
-              <label>Gender</label> <label>{user?.gender}</label>
-              <br />
-              <label>Height</label> <label>{user?.height}</label>
-              <br />
-              <label>Interest</label> <label>{user?.interest}</label>
+        <div className="profilecon">
+          <div className="div-i">
+            <div className="biodiv">
+              <h2>Bio --------------</h2>
             </div>
-            <div className="grid-itemzz">
-              <h1>CONTACT INFO ----------------------</h1>
-              <label>PHONE NUMBER</label>
-              <label>{user?.phone}</label>
-              <br />
-              <label>ADDRESS</label>
-              <label>{user?.address}</label>
-              <br />
-              <br />
-              <br />
-              <br />
-
-              <h1>SKILL-----------------------</h1>
-              <label>Occupation</label>
-              <label>{user?.occupation}</label>
-              <br />
-              <label>Relationship</label>
-              <label>{user?.status}</label>
+            <div className="basicdiv">
+              Basic information -----------
+              <h5>D.O.B</h5> <label className="labelstyle">22/22/22</label>
+              <h5>Gender</h5> <label className="labelstyle">Female</label>
+              <h5>Height</h5> <label className="labelstyle">22cm</label>
+              <h5>Interest</h5>{" "}
+              <label className="labelstyle">VCooking, dancing, coding</label>
             </div>
           </div>
-        </section>
+          <div className="div-ii">
+            <div className="contactdiv">
+              Conatct information ----------
+              <h5>Phone Numbeer</h5>{" "}
+              <label className="labelstyle">+2348159417362</label>
+              <h5>Address</h5>{" "}
+              <label className="labelstyle">
+                Plot 1122, Block 44, Unity road, aja, Lekki, Lagos, Nigeria.
+              </label>
+            </div>
+            <div className="Skilldiv">
+              Skills ---------
+              <h5>Occupation</h5> <label className="labelstyle">Designer</label>
+              <h5>Relationship</h5> <label className="labelstyle">Single</label>
+            </div>
+          </div>
+        </div>
       </div>
       <br />
       <br />

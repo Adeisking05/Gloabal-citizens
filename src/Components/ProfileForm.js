@@ -62,9 +62,10 @@ const ProfileForm = () => {
   return (
     <>
       <NavBar />
+
       <div className="aligned">
-        <img src={avatar} alt="" className="img" />
-        <button className="imgb">Upload new picture</button>
+        <img alt="not found" className="img" src={avatar} />
+        <button className="imgb">Upload a picture</button>
       </div>
       <div className="containerzz">
         <form className="pf" onSubmit={handleSubmit}>
