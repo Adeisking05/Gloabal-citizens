@@ -221,23 +221,51 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  /* row-gap: 50px; */
-  /* column-gap: 50px; */
-  padding: 0 350px;
+  row-gap: 70px;
+
+  padding: 0 300px;
 }
-.div-i {
-  flex-direction: column;
+.divi {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  column-gap: 60px;
 }
-.div-ii {
-  flex-direction: column;
+.divii {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 .biodiv {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
-.labelstyle {
-  flex-direction: row;
+.basicdiv {
+  /* display: flex; */
+  flex-direction: column;
+}
+.contactdiv {
   display: flex;
+  flex-direction: column;
+}
+.skilldiv {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and(max-width: 800px) {
+  .profilecon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .div-1 {
+    flex-direction: column;
+  }
+  .div-ii {
+    flex-direction: column;
+  }
 }

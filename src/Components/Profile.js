@@ -83,33 +83,29 @@ const Profile = () => {
         <br />
         <br />
         <div className="profilecon">
-          <div className="div-i">
-            <div className="biodiv">
-              <h2>Bio --------------</h2>
-            </div>
-            <div className="basicdiv">
-              Basic information -----------
-              <h5>D.O.B</h5> <label className="labelstyle">22/22/22</label>
-              <h5>Gender</h5> <label className="labelstyle">Female</label>
-              <h5>Height</h5> <label className="labelstyle">22cm</label>
-              <h5>Interest</h5>{" "}
-              <label className="labelstyle">VCooking, dancing, coding</label>
-            </div>
-          </div>
-          <div className="div-ii">
+          <div className="divi">
+            <div className="biodiv">BIO ------------</div>
             <div className="contactdiv">
-              Conatct information ----------
-              <h5>Phone Numbeer</h5>{" "}
-              <label className="labelstyle">+2348159417362</label>
+              CONTACT INFORMATION ---------
+              <h5>Phone number</h5> <label className="">6464738293939</label>
               <h5>Address</h5>{" "}
-              <label className="labelstyle">
+              <label>
                 Plot 1122, Block 44, Unity road, aja, Lekki, Lagos, Nigeria.
               </label>
             </div>
-            <div className="Skilldiv">
-              Skills ---------
-              <h5>Occupation</h5> <label className="labelstyle">Designer</label>
-              <h5>Relationship</h5> <label className="labelstyle">Single</label>
+          </div>
+          <div className="divii">
+            <div className="basicdiv">
+              BASIC INFORMATION ------------
+              <h5>D.O.B</h5> <label>22/22/22</label>
+              <h5>Gender</h5> <label>Female</label>
+              <h5>Height</h5> <label>22cm</label>
+              <h5>Interest</h5> <label>Codin cooking sports</label>
+            </div>
+            <div className="skilldiv">
+              SKILLS ---------
+              <h5>Occupation</h5> <label>designer</label>
+              <h5>Relationship</h5> <label>Single</label>
             </div>
           </div>
         </div>
