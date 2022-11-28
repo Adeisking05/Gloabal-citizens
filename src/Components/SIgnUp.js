@@ -12,6 +12,7 @@ const SIgnUp = () => {
     nin: "",
     password: "",
   });
+  const [message, setMessage] = useState("");
   const handleChange = (e) => {
     const target = e.target;
     const { name, value } = target;
@@ -36,12 +37,14 @@ const SIgnUp = () => {
         }
       );
       const data = await res.json();
+      const result = res;
       console.log(data);
+      // console.log(result);
 
       if (data.msg === "Successfully created user") {
         navigate("/Login");
       } else {
-        alert("error creating account");
+        setMessage(data.msg);
       }
     } catch (error) {}
   };
@@ -82,7 +85,7 @@ const SIgnUp = () => {
               <div className="login-container"></div>
             </section>
             <div className="input-container name">
-              <label className="lbb " for="email">
+              <label className="lbb " htmlFor="email">
                 Email
               </label>
               <input
@@ -95,7 +98,7 @@ const SIgnUp = () => {
               />
             </div>
             <div className="input-container email">
-              <label className="lbb" for="nin">
+              <label className="lbb" htmlFor="nin">
                 NIN
               </label>
               <input
@@ -108,8 +111,9 @@ const SIgnUp = () => {
                 name="nin"
               />
             </div>
+            {message ? <div>{message}</div> : null}
             <div className="input-container password">
-              <label className="lbb" for="password">
+              <label className="lbb" htmlFor="password">
                 Password
               </label>
               <input

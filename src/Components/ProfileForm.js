@@ -5,9 +5,12 @@ import "../Components/profile.css";
 import { NavBar } from "./NavBar";
 import { ProformNav } from "./ProformNav";
 import { userContext } from "./UserContext";
+import { useLocation } from "react-router-dom";
 const ProfileForm = () => {
+  const location = useLocation();
+  const name = location.state.name;
   const [formData, setFormData] = useState({
-    name: "",
+    name: name,
     status: "",
     address: "",
     phone: "",
