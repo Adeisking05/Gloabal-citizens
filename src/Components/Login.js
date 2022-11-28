@@ -3,7 +3,7 @@ import { useState, useContext } from "react";
 import "../styles/SignUp.css";
 import Data from "../assets/Data-privacy.png";
 import Gropup from "../assets/Group.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { userContext } from "./UserContext";
 const Login = () => {
   const navigate = useNavigate();
@@ -37,18 +37,20 @@ const Login = () => {
             <section className="copy">
               <h6 className="allrad">
                 Don't have an account ?
-                <button
-                  style={{
-                    backgroundColor: "#a422cd",
-                    color: "white",
-                    width: "80px",
-                    borderRadius: "70px",
-                    marginLeft: "260px",
-                    margin: "30px",
-                  }}
-                >
-                  Sign Up
-                </button>
+                <Link to="/SIgnUp">
+                  <button
+                    style={{
+                      backgroundColor: "#a422cd",
+                      color: "white",
+                      width: "80px",
+                      borderRadius: "70px",
+                      marginLeft: "260px",
+                      margin: "30px",
+                    }}
+                  >
+                    Sign Up
+                  </button>
+                </Link>
               </h6>
               <h2 className="sh2">Login</h2>
               <h3>Sign in to an account</h3>

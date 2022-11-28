@@ -5,6 +5,10 @@ import { x } from "react-icons-kit/feather/x";
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/Nav.css";
 import { userContext } from "./UserContext";
+import News from "./News";
+import AboutUs from "./AboutUs";
+import SIgnUp from "./SIgnUp";
+import Login from "./Login";
 
 export const NavBar = () => {
   const userValues = useContext(userContext);
@@ -26,8 +30,12 @@ export const NavBar = () => {
         <Link to="/">
           <li>Home</li>
         </Link>
-        <li>News</li>
-        <li>About</li>
+        <Link to="/News">
+          <li>News</li>
+        </Link>
+        <Link to="/AboutUs">
+          <li>About</li>
+        </Link>
         {token ? (
           <Link to="/Profile">
             <li>Profile</li>

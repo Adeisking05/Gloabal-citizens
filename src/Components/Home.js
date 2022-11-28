@@ -5,6 +5,7 @@ import money from "../assets/money.png";
 import { NavBar } from "./NavBar";
 import "../styles/Home.css";
 import BrowseUsers from "../Components/BrowseUsers";
+import Footer from "./Footer";
 const Home = () => {
   return (
     <>
@@ -113,6 +114,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

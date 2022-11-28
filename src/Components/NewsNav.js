@@ -3,6 +3,11 @@ import { Icon } from "react-icons-kit";
 import { menu } from "react-icons-kit/feather/menu";
 import { x } from "react-icons-kit/feather/x";
 import "../styles/Nav.css";
+import { Link } from "react-router-dom";
+import News from "./News";
+import AboutUs from "./AboutUs";
+import SIgnUp from "./SIgnUp";
+import Login from "./Login";
 export const NewsNav = () => {
   const [toggle, setToggle] = useState(false);
 
@@ -17,11 +22,21 @@ export const NewsNav = () => {
         {toggle ? <Icon icon={x} size={28} /> : <Icon icon={menu} size={28} />}
       </div>
       <ul className="links">
-        <li>Home</li>
-        <li>News</li>
-        <li>About</li>
-        <li>Sign In</li>
-        <li className="SignUp-btn">Sign Up</li>
+        <Link to="/">
+          <li>Home</li>
+        </Link>
+        <Link to="/News">
+          <li>News</li>
+        </Link>
+        <Link to="/AboutUs">
+          <li>About</li>
+        </Link>
+        <Link to="/Login">
+          <li>Sign In</li>
+        </Link>
+        <Link to="/SIgnUp">
+          <li className="SignUp-btn">Sign Up</li>
+        </Link>
       </ul>
     </nav>
   );

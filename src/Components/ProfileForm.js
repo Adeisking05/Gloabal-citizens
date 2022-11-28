@@ -6,6 +6,7 @@ import { NavBar } from "./NavBar";
 import { ProformNav } from "./ProformNav";
 import { userContext } from "./UserContext";
 import { useLocation } from "react-router-dom";
+import Footer from "./Footer";
 const ProfileForm = () => {
   const location = useLocation();
   const name = location.state.name;
@@ -201,6 +202,7 @@ const ProfileForm = () => {
           </div>
         </form>
       </div>
+      <Footer />
     </>
   );
 };

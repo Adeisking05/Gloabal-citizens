@@ -7,6 +7,7 @@ import { useState, useEffect, useContext } from "react";
 import { NavBar } from "./NavBar";
 import { Link, useNavigate } from "react-router-dom";
 import { userContext } from "./UserContext";
+import Footer from "./Footer";
 
 const Profile = () => {
   const [user, setUser] = useState({});
@@ -45,7 +46,10 @@ const Profile = () => {
       <div className="containeree">
         <section className="profilezz">
           <div className="imagezz">
-            <img className="baa" src={bavatar} alt="user pic" />{" "}
+            <div className="stat">
+              <img className="baa" src={bavatar} alt="user pic" />{" "}
+              <p>{user.status}</p>
+            </div>
             <h2 style={{ marginLeft: "10px" }}>
               <br />
               {user?.name} <h4>{user?.email}</h4> <br />
@@ -58,10 +62,10 @@ const Profile = () => {
                 {" "}
                 Edit Profile
               </button>
-              <p style={{ marginRight: "30px" }}>{user.status}</p>
             </h2>
           </div>
         </section>
+
         <br />
         <br />
 
@@ -105,6 +109,15 @@ const Profile = () => {
           </div>
         </section>
       </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <Footer />
     </>
   );
 };
