@@ -11,7 +11,12 @@ const AboutUs = () => {
     <>
       <NavBar />
       <div className="container">
-        <div className="header">About Us</div>
+        <div
+          className="header"
+          style={{ fontWeight: "900", color: "gray", fontSize: "30px" }}
+        >
+          About Us
+        </div>
         <div className="content-large">
           Lorem ipsum dolor sit am et, Lorem ipsum dolor sit am et, Lorem ipsum
           dolor sit am et, Lorem ipsum Lorem ipsum dolor sit am et, Lorem ipsum

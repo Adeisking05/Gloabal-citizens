@@ -53,7 +53,26 @@ const Profile = () => {
             <h2 style={{ marginLeft: "10px" }}>
               <br />
               {user?.name} <h4>{user?.email}</h4> <br />
-              <button className="edp" onClick={() => navigate("/ProfileForm")}>
+              <button
+                className="edp"
+                onClick={() =>
+                  navigate("/ProfileForm", {
+                    state: {
+                      name: user?.name,
+                      status: user?.status,
+                      bio: user?.bio,
+                      occupation: user?.occupation,
+                      interest: user?.interest,
+                      address: user?.address,
+                      email: user?.email,
+                      dob: user?.date_of_birth,
+                      gender: user?.gender,
+                      height: user?.height,
+                      phone: user?.phone,
+                    },
+                  })
+                }
+              >
                 {" "}
                 Edit Profile
               </button>

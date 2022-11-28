@@ -3,6 +3,7 @@ import { useState } from "react";
 import "../styles/SignUp.css";
 import Data from "../assets/Data-privacy.png";
 import Gropup from "../assets/Group.png";
+import Logo from "../assets/logo.png";
 
 import { useNavigate, Link, UseLocation } from "react-router-dom";
 
@@ -13,6 +14,7 @@ const SIgnUp = () => {
     nin: "",
     password: "",
   });
+  const [message, setMessage] = useState("");
   const handleChange = (e) => {
     const target = e.target;
     const { name, value } = target;
@@ -37,12 +39,14 @@ const SIgnUp = () => {
         }
       );
       const data = await res.json();
+      const result = res;
       console.log(data);
+      // console.log(result);
 
       if (data.msg === "Successfully created user") {
         navigate("/Login");
       } else {
-        alert("error creating account");
+        setMessage(data.msg);
       }
     } catch (error) {}
   };
@@ -52,7 +56,9 @@ const SIgnUp = () => {
       <div className="split-screen">
         <div className="left">
           <section className="national">
-            <h4>NATIONAL CITIZEN</h4>
+            <div id="logo-div">
+              <img src={Logo} alt="" />
+            </div>
           </section>
           <section className="copy-img">
             <img src={Data} alt="" />
@@ -61,7 +67,7 @@ const SIgnUp = () => {
 
         <div className="right">
           <form onSubmit={handleSubmit}>
-            <section className="copy">
+            <section className="copy space">
               <h6 className="allrad">
                 Already have an acount ?
                 <Link to="/Login">
@@ -80,12 +86,12 @@ const SIgnUp = () => {
                 </Link>
               </h6>
               <h2 className="sh2">Sign Up</h2>
-              <h3>Create an account</h3>
+              <h3 className="creation">Create an account</h3>
 
               <div className="login-container"></div>
             </section>
             <div className="input-container name">
-              <label className="lbb " for="email">
+              <label className="lbb " htmlFor="email">
                 Email
               </label>
               <input
@@ -98,7 +104,7 @@ const SIgnUp = () => {
               />
             </div>
             <div className="input-container email">
-              <label className="lbb" for="nin">
+              <label className="lbb" htmlFor="nin">
                 NIN
               </label>
               <input
@@ -111,8 +117,9 @@ const SIgnUp = () => {
                 name="nin"
               />
             </div>
+            {message ? <div>{message}</div> : null}
             <div className="input-container password">
-              <label className="lbb" for="password">
+              <label className="lbb" htmlFor="password">
                 Password
               </label>
               <input
@@ -120,7 +127,7 @@ const SIgnUp = () => {
                 name="password"
                 type="password"
                 value={formData.password}
-                placeholder="must be at least 6 characters"
+                placeholder="Must be at least 6 characters"
                 onChange={handleChange}
                 minLength={6}
               ></input>
@@ -133,7 +140,7 @@ const SIgnUp = () => {
             <section className="copy legal">
               <p>
                 <span className="small">
-                  By continuing you agree to ou terms
+                  By continuing, you agree to our terms and conditions
                 </span>
               </p>
             </section>

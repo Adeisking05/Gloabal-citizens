@@ -9,6 +9,7 @@ import News from "./News";
 import AboutUs from "./AboutUs";
 import SIgnUp from "./SIgnUp";
 import Login from "./Login";
+import Logo from "../assets/logo.png";
 
 export const NavBar = () => {
   const userValues = useContext(userContext);
@@ -22,7 +23,10 @@ export const NavBar = () => {
 
   return (
     <nav className={toggle ? "navbar expanded" : "navbar"}>
-      <h2 className="logo">NavBar</h2>
+      {/* <h2 className="logo">NavBar</h2> */}
+      <div id="logo-div">
+        <img src={Logo} alt="" />
+      </div>
       <div className="toggle-icon" onClick={handleToggle}>
         {toggle ? <Icon icon={x} size={28} /> : <Icon icon={menu} size={28} />}
       </div>

@@ -60,6 +60,13 @@
 .navbar .toggle-icon {
   display: none;
 }
+#logo-div{
+  max-width: 200px;
+  width: 100%
+}
+#logo-div img{
+  width: auto;
+}
 
 @media (max-width: 768px) {
   .navbar {
@@ -119,4 +126,10 @@
     margin: 15px 0;
     font-size: 24px;
   }
+}
+@media (max-width: 390px) {
+  #logo-div {
+      max-width: 100px;
+      width: 100%
+    }
 }

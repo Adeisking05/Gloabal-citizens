@@ -5,6 +5,7 @@ import Data from "../assets/Data-privacy.png";
 import Gropup from "../assets/Group.png";
 import { useNavigate, Link } from "react-router-dom";
 import { userContext } from "./UserContext";
+import Logo from "../assets/logo.png";
 const Login = () => {
   const navigate = useNavigate();
   const userValues = useContext(userContext);
@@ -12,7 +13,7 @@ const Login = () => {
   if (success) {
     setTimeout(() => {
       navigate("/");
-    }, 3000);
+    }, 2000);
   }
   const handleChange = (e) => {
     const target = e.target;
@@ -25,7 +26,9 @@ const Login = () => {
       <div className="split-screen">
         <div className="left">
           <section className="national">
-            <h4>NATIONAL CITIZEN</h4>
+            <div id="logo-div">
+              <img src={Logo} alt="" />
+            </div>
           </section>
           <section className="copy-img">
             <img src={Data} alt="" />
@@ -34,7 +37,7 @@ const Login = () => {
 
         <div className="right">
           <form onSubmit={handleSubmit}>
-            <section className="copy">
+            <section className="copy space">
               <h6 className="allrad">
                 Don't have an account ?
                 <Link to="/SIgnUp">
@@ -53,7 +56,7 @@ const Login = () => {
                 </Link>
               </h6>
               <h2 className="sh2">Login</h2>
-              <h3>Sign in to an account</h3>
+              <h3 className="creation">Welcome Back</h3>
 
               <div className="login-container"></div>
             </section>
@@ -81,7 +84,7 @@ const Login = () => {
                 name="password"
                 type="password"
                 value={formData.password}
-                placeholder="must be at least 6 characters"
+                placeholder="Must be at least 6 characters"
                 onChange={handleChange}
                 minLength={6}
               ></input>
@@ -94,7 +97,7 @@ const Login = () => {
             <section className="copy legal">
               <p>
                 <span className="small">
-                  By continuing you agree to ou terms
+                  By continuing, you agree to our terms and conditions
                 </span>
               </p>
             </section>

@@ -39,6 +39,8 @@
   align-items: center;
   font-weight: bold;
   text-align: center;
+  font-style: normal;
+  font-size: large
   /* margin-left: 60px; */
 }
 .str-btn {
@@ -184,10 +186,10 @@
   }
 }
 .cta-sectionzz {
-  background: gray;
+  background: #EDEDED;
 
   margin-top: 100px;
-  color: #fff;
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -241,7 +243,7 @@
 }
 .col_1 {
   margin-top: 70px;
-  color: white;
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center;

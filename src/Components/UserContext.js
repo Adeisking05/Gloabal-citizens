@@ -10,6 +10,7 @@ export default function UseTokenProviderUser(props) {
   const token = localStorage.getItem("user_rubbish");
   const userId = localStorage.getItem("userId");
   const [success, setSuccess] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {

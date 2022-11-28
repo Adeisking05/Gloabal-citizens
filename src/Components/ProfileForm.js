@@ -5,19 +5,32 @@ import "../Components/profile.css";
 import { NavBar } from "./NavBar";
 import { ProformNav } from "./ProformNav";
 import { userContext } from "./UserContext";
+import { useLocation } from "react-router-dom";
 import Footer from "./Footer";
 const ProfileForm = () => {
+  const location = useLocation();
+  const name = location.state.name;
+  const status = location.state.status;
+  const bio = location.state.bio;
+  const occupation = location.state.occupation;
+  const interest = location.state.interest;
+  const address = location.state.address;
+  const email = location.state.email;
+  const dob = location.state.dob;
+  const gender = location.state.gender;
+  const height = location.state.height;
+  const phone = location.state.phone;
   const [formData, setFormData] = useState({
-    name: "",
-    status: "",
-    address: "",
-    phone: "",
-    email: "",
-    date_of_birth: "",
-    occupation: "",
-    height: "",
-    interest: "",
-    bio: "",
+    name: name,
+    status: status,
+    address: address,
+    phone: phone,
+    email: email,
+    date_of_birth: dob,
+    occupation: occupation,
+    height: height,
+    interest: interest,
+    bio: bio,
   });
 
   const userValues = useContext(userContext);
